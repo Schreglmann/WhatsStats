@@ -2,7 +2,9 @@ import re
 
 users = []
 total=0
-emojis = ["😂", "👍", "🙈", "😅", "💪", "🙄", "😬", "😏", "🤔", "😱", "🤨", "😉", "😭", "🤤"]
+emojis = ["😂", "👍", "🙈", "😅"
+# , "💪", "🙄", "😬", "😏", "🤔", "😱", "🤨", "😉", "😭", "🤤"
+ ]
 
 def addEmojis(user):
     for emoji in emojis:
@@ -45,7 +47,6 @@ def getUser(text):
                 for emoji in user:
                     if(emoji is not "Name" and emoji is not "GIFs" and emoji is not "Bilder" and emoji is not "Nachrichten"):
                         if(text.find(emoji, 0, len(text)) is not -1):
-                            print(emoji)
                             user[emoji]+=text.count(emoji) 
 
                 if(text.find("Bild weggelassen", 0, len(text)) is not -1):
